@@ -23,9 +23,11 @@ function App() {
   return (
     <div className="App">
       <h1>Run-Tracker</h1>
-      <CreatePost
-        fetchUserPost={fetchUserPost}
-        setFetchUserPost={setFetchUserPost} />
+      
+        <CreatePost
+          fetchUserPost={fetchUserPost}
+          setFetchUserPost={setFetchUserPost}
+          />
       
       {userPost.map((userPost) => (
         <div key={userPost.id}> 
@@ -33,10 +35,8 @@ function App() {
             userPost={userPost}
             key={userPost.id}
             fetchUserPost={fetchUserPost}
-        setFetchUserPost={setFetchUserPost}
-            
-          />
-          
+            setFetchUserPost={setFetchUserPost}
+            />
         </div>
       ))}
     </div>

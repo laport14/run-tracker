@@ -2,9 +2,9 @@ import React, { useState } from 'react'
 import axios from "axios"
 
 function UpdateUserPost(props) {
-  const [date, setDate] = useState('')
-  const [distance, setDistance] = useState('')
-  const [runTime, setRunTime] = useState('')
+  const [date, setDate] = useState(props.userPost.fields.date)
+  const [distance, setDistance] = useState(props.userPost.fields.distance)
+  const [runTime, setRunTime] = useState(props.userPost.fields.runTime)
 
 
   const handleSubmit = async (e) => {
@@ -15,7 +15,7 @@ function UpdateUserPost(props) {
       runTime,
     };
 
-    const airtableURL = `https://api.airtable.com/v0/${process.env.REACT_APP_AIRTABLE_BASE}/record${props.userPost.id}`
+    const airtableURL = `https://api.airtable.com/v0/${process.env.REACT_APP_AIRTABLE_BASE}/record/${props.userPost.id}`
     await axios.put(airtableURL, { fields },
       {
         headers: {

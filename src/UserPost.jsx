@@ -7,7 +7,7 @@ function UserPost(props) {
   
   const handleDelete = async () => {
     setDeleted(true)
-    const airtableURL = `https://api.airtable.com/v0/${process.env.REACT_APP_AIRTABLE_BASE}/record${props.userPost.id}`
+    const airtableURL = `https://api.airtable.com/v0/${process.env.REACT_APP_AIRTABLE_BASE}/record/${props.userPost.id}`
     await axios.delete(airtableURL,
       {
         headers: {
