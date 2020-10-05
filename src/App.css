@@ -1,38 +1,81 @@
 .App {
+  font-family: "Noto Sans";
+}
+
+body {
+  background-image: url(https://tinyurl.com/yxkvgq83);
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+}
+
+h1 {
+  font-family: "Noto Sans";
+  font-weight: 700;
+  margin: 0 auto;
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+p {
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  font-family: "Noto Sans";
+  font-weight: 700;
+  margin: 0 auto;
+  
 }
 
-.App-link {
-  color: #61dafb;
+
+.userpost {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  width: 300px;
+  max-width: 300px;
+  margin: 10px auto;
+  padding: 10px;
+  text-align: center;
+  border: 1px solid black;
+  background-color: white;
+  opacity: .8;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+form {
+  display: flex;
+  flex-direction: column;
+  width: 300px;
+  max-width: 300px;
+  padding: 10px;
+  margin: 0 auto;
+  border: 1px solid black;
+}
+
+.container {
+  float: left;
+  position: relative;
+  left: 8.3%;
+  margin: 10px;
+
+}
+
+.delete-button {
+  width: 280px;
+  max-width: 280px;
+  margin: 10px 10px;
+}
+
+.update-form {
+  width: 280px;
+  max-width: 280px;
+}
+
+input,
+button {
+  font-family: "Noto Sans";
+  font-weight: 400;
+}
+
+button {
+  margin: 10px 0;
 }
